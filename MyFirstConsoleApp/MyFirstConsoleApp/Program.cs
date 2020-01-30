@@ -194,6 +194,7 @@ namespace MyFirstConsoleApp
 			//minute, secunde care este echivant ca timp cu numarul initial de secunde.
 			//De exemplu: 7384 secunde este echivalent cu 2 ore 3 minute si 4 secunde.
 
+			//Declaram toate tipurile de unitati si valori in mod scalabil
 			Dictionary<string, int> timeDefinition = new Dictionary<string, int>
 				{
 					{"hours", 3600 },
@@ -201,20 +202,24 @@ namespace MyFirstConsoleApp
 					{"seconds", 1 }
 				};
 			
+			//String builder pentru construirea raspunsului
 			StringBuilder response = new StringBuilder();
 
+			//Atata timp cat secundele nu sunt egale cu 0
 			while (seconds != 0)
 			{
+				//Itereaza prin fiecare cheie a dictionarului
 				for (int index = 0; index < timeDefinition.Count; index++)
 				{
 					int numberOfMeasures = 0;
+					//Atata timp cat numarul de secunde este mai mare decat actuala valoare aferente indexului, executa urmatorul cod
 					while (seconds >= timeDefinition.ElementAt(index).Value)
 					{
 						numberOfMeasures++;
-
 						seconds = seconds - timeDefinition.ElementAt(index).Value;
-						
 					}
+
+					//Adauga la raspuns
 					response.Append(string.Format("{0} {1} ", timeDefinition.ElementAt(index).Key, numberOfMeasures));
 				}
 			}
