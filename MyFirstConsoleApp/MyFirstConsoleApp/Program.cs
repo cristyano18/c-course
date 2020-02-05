@@ -26,7 +26,7 @@ namespace MyFirstConsoleApp
 				Console.WriteLine(item);
 			}
 			Console.WriteLine(program.optionalSecond(25, 10000, 8));
-			Console.WriteLine(program.optionalThird(10000));
+			Console.WriteLine(program.optionalThird(100));
 			Console.Read();
 
 
