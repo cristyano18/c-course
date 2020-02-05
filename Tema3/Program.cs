@@ -118,11 +118,11 @@ namespace Tema3
             if (isEvenLength)
             {
                 char[,] bidimensional = new char[sumLength / strArray.Length, sumLength / strArray.Length];
-                for (int index = 0; index < strArray.Length; index++)
+                for (int index_x = 0; index_x < strArray.Length; index_x++)
                 {
-                    for (int z = 0; z < strArray[index].Length; z++)
+                    for (int index_z = 0; index_z < strArray[index_x].Length; index_z++)
                     {
-                        bidimensional[index, z] = strArray[index].ElementAt(z);
+                        bidimensional[index_x, index_z] = strArray[index_x].ElementAt(index_z);
 
                     }
                 }
